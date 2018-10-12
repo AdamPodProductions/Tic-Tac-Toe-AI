@@ -136,7 +136,7 @@
             this.Controls.Add(this.bottom_left);
             this.Name = "Form1";
             this.Text = "Tic Tac Toe AI";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Form_Load);
             this.ResumeLayout(false);
 
         }
