@@ -23,6 +23,14 @@ namespace TicTacToe_AI
         private void Form_Load(object sender, EventArgs e)
         {
             grid = new string[3, 3];
+
+            for (int x = 0; x < 3; x++)
+            {
+                for (int y = 0; y < 3; y++)
+                {
+                    grid[x, y] = "";
+                }
+            }
         }
 
         public void Mark(int xPos, int yPos)
