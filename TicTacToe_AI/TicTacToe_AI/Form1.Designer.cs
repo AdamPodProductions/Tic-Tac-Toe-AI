@@ -47,6 +47,7 @@
             this.bottom_left.Size = new System.Drawing.Size(300, 300);
             this.bottom_left.TabIndex = 0;
             this.bottom_left.UseVisualStyleBackColor = true;
+            this.bottom_left.Click += new System.EventHandler(this.bottom_left_Click);
             // 
             // bottom_right
             // 
@@ -56,6 +57,7 @@
             this.bottom_right.Size = new System.Drawing.Size(300, 300);
             this.bottom_right.TabIndex = 1;
             this.bottom_right.UseVisualStyleBackColor = true;
+            this.bottom_right.Click += new System.EventHandler(this.bottom_right_Click);
             // 
             // bottom_center
             // 
@@ -65,6 +67,7 @@
             this.bottom_center.Size = new System.Drawing.Size(300, 300);
             this.bottom_center.TabIndex = 2;
             this.bottom_center.UseVisualStyleBackColor = true;
+            this.bottom_center.Click += new System.EventHandler(this.bottom_center_Click);
             // 
             // center_center
             // 
@@ -74,6 +77,7 @@
             this.center_center.Size = new System.Drawing.Size(300, 300);
             this.center_center.TabIndex = 5;
             this.center_center.UseVisualStyleBackColor = true;
+            this.center_center.Click += new System.EventHandler(this.center_center_Click);
             // 
             // center_right
             // 
@@ -83,6 +87,7 @@
             this.center_right.Size = new System.Drawing.Size(300, 300);
             this.center_right.TabIndex = 4;
             this.center_right.UseVisualStyleBackColor = true;
+            this.center_right.Click += new System.EventHandler(this.center_right_Click);
             // 
             // center_left
             // 
@@ -92,6 +97,7 @@
             this.center_left.Size = new System.Drawing.Size(300, 300);
             this.center_left.TabIndex = 3;
             this.center_left.UseVisualStyleBackColor = true;
+            this.center_left.Click += new System.EventHandler(this.center_left_Click);
             // 
             // top_center
             // 
@@ -101,6 +107,7 @@
             this.top_center.Size = new System.Drawing.Size(300, 300);
             this.top_center.TabIndex = 8;
             this.top_center.UseVisualStyleBackColor = true;
+            this.top_center.Click += new System.EventHandler(this.top_center_Click);
             // 
             // top_right
             // 
@@ -110,6 +117,7 @@
             this.top_right.Size = new System.Drawing.Size(300, 300);
             this.top_right.TabIndex = 7;
             this.top_right.UseVisualStyleBackColor = true;
+            this.top_right.Click += new System.EventHandler(this.top_right_Click);
             // 
             // top_left
             // 
@@ -119,6 +127,7 @@
             this.top_left.Size = new System.Drawing.Size(300, 300);
             this.top_left.TabIndex = 6;
             this.top_left.UseVisualStyleBackColor = true;
+            this.top_left.Click += new System.EventHandler(this.top_left_Click);
             // 
             // Form1
             // 
