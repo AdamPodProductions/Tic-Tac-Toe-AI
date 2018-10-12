@@ -15,6 +15,8 @@ namespace TicTacToe_AI
         private string[,] grid;
         private string currentMark = "X";
 
+        private int turns = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -38,6 +40,20 @@ namespace TicTacToe_AI
             if (grid[xPos, yPos].Equals(""))
             {
                 grid[xPos, yPos] = currentMark;
+                SwitchMark();
+                turns++;
+            }
+        }
+
+        public void SwitchMark()
+        {
+            if (currentMark == "X")
+            {
+                currentMark = "O";
+            }
+            else
+            {
+                currentMark = "X";
             }
         }
 
