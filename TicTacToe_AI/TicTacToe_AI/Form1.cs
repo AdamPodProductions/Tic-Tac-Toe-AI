@@ -12,6 +12,8 @@ namespace TicTacToe_AI
 {
     public partial class Form1 : Form
     {
+        private string[,] grid;
+
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace TicTacToe_AI
 
         private void Form_Load(object sender, EventArgs e)
         {
-
+            grid = new string[3, 3];
         }
     }
 }
