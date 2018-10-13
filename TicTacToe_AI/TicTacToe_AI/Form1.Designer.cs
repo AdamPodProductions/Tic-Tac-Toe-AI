@@ -37,6 +37,7 @@
             this.top_center = new System.Windows.Forms.Button();
             this.top_right = new System.Windows.Forms.Button();
             this.top_left = new System.Windows.Forms.Button();
+            this.win_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bottom_left
@@ -156,11 +157,24 @@
             this.top_left.UseVisualStyleBackColor = true;
             this.top_left.Click += new System.EventHandler(this.top_left_Click);
             // 
+            // win_label
+            // 
+            this.win_label.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.win_label.AutoSize = true;
+            this.win_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.win_label.Location = new System.Drawing.Point(418, 9);
+            this.win_label.Name = "win_label";
+            this.win_label.Size = new System.Drawing.Size(0, 55);
+            this.win_label.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 985);
+            this.Controls.Add(this.win_label);
             this.Controls.Add(this.top_center);
             this.Controls.Add(this.top_right);
             this.Controls.Add(this.top_left);
@@ -174,6 +188,7 @@
             this.Text = "Tic Tac Toe AI";
             this.Load += new System.EventHandler(this.Form_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -188,6 +203,7 @@
         private System.Windows.Forms.Button top_center;
         private System.Windows.Forms.Button top_right;
         private System.Windows.Forms.Button top_left;
+        private System.Windows.Forms.Label win_label;
     }
 }
 

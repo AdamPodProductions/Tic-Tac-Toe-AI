@@ -13,9 +13,11 @@ namespace TicTacToe_AI
     public partial class Form1 : Form
     {
         private string[,] grid;
+        private Button[,] buttonGrid;
         private string currentMark = "X";
 
         private int turns = 0;
+        private bool playing = true;
 
         public Form1()
         {
@@ -25,6 +27,7 @@ namespace TicTacToe_AI
         private void Form_Load(object sender, EventArgs e)
         {
             grid = new string[3, 3];
+            buttonGrid = new Button[3, 3];
 
             for (int x = 0; x < 3; x++)
             {
@@ -33,25 +36,26 @@ namespace TicTacToe_AI
                     grid[x, y] = "";
                 }
             }
+
+            buttonGrid[0, 0] = top_left;
+            buttonGrid[1, 0] = top_center;
+            buttonGrid[2, 0] = top_right;
+
+            buttonGrid[0, 1] = center_left;
+            buttonGrid[1, 1] = center_center;
+            buttonGrid[2, 1] = center_right;
+
+            buttonGrid[0, 2] = bottom_left;
+            buttonGrid[1, 2] = bottom_center;
+            buttonGrid[2, 2] = bottom_right;
         }
 
-        public void Mark(int xPos, int yPos)
+        public void Mark(int x, int y)
         {
-            if (grid[xPos, yPos].Equals(""))
+            if (grid[x, y].Equals(""))
             {
-                grid[xPos, yPos] = currentMark;
-                SwitchMark();
-                turns++;
-                CheckForWin();
-            }
-        }
-
-        public void Mark(int xPos, int yPos, Button button)
-        {
-            if (grid[xPos, yPos].Equals(""))
-            {
-                grid[xPos, yPos] = currentMark;
-                button.Text = currentMark;
+                grid[x, y] = currentMark;
+                buttonGrid[x, y].Text = currentMark;
                 SwitchMark();
                 turns++;
                 CheckForWin();
@@ -107,53 +111,52 @@ namespace TicTacToe_AI
 
         public void Win(string mark)
         {
-            Console.WriteLine(mark + " wins");
-            Application.Exit();
+            win_label.Text = currentMark + " wins!";
         }
 
         private void top_left_Click(object sender, EventArgs e)
         {
-            Mark(0, 0, top_left);
+            Mark(0, 0);
         }
 
         private void top_center_Click(object sender, EventArgs e)
         {
-            Mark(1, 0, top_center);
+            Mark(1, 0);
         }
 
         private void top_right_Click(object sender, EventArgs e)
         {
-            Mark(2, 0, top_right);
+            Mark(2, 0);
         }
 
         private void center_left_Click(object sender, EventArgs e)
         {
-            Mark(0, 1, center_left);
+            Mark(0, 1);
         }
 
         private void center_center_Click(object sender, EventArgs e)
         {
-            Mark(1, 1, center_center);
+            Mark(1, 1);
         }
 
         private void center_right_Click(object sender, EventArgs e)
         {
-            Mark(2, 1, center_right);
+            Mark(2, 1);
         }
 
         private void bottom_left_Click(object sender, EventArgs e)
         {
-            Mark(0, 2, bottom_left);
+            Mark(0, 2);
         }
 
         private void bottom_center_Click(object sender, EventArgs e)
         {
-            Mark(1, 2, bottom_center);
+            Mark(1, 2);
         }
 
         private void bottom_right_Click(object sender, EventArgs e)
         {
-            Mark(2, 2, bottom_right);
+            Mark(2, 2);
         }
     }
 }
