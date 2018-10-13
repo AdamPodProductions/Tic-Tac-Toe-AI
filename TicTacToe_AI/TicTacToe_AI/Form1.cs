@@ -40,46 +40,55 @@ namespace TicTacToe_AI
         private void top_left_Click(object sender, EventArgs e)
         {
             gameController.Mark(0, 0);
+            gameController.AIChoose();
         }
 
         private void top_center_Click(object sender, EventArgs e)
         {
             gameController.Mark(1, 0);
+            gameController.AIChoose();
         }
 
         private void top_right_Click(object sender, EventArgs e)
         {
             gameController.Mark(2, 0);
+            gameController.AIChoose();
         }
 
         private void center_left_Click(object sender, EventArgs e)
         {
             gameController.Mark(0, 1);
+            gameController.AIChoose();
         }
 
         private void center_center_Click(object sender, EventArgs e)
         {
             gameController.Mark(1, 1);
+            gameController.AIChoose();
         }
 
         private void center_right_Click(object sender, EventArgs e)
         {
             gameController.Mark(2, 1);
+            gameController.AIChoose();
         }
 
         private void bottom_left_Click(object sender, EventArgs e)
         {
             gameController.Mark(0, 2);
+            gameController.AIChoose();
         }
 
         private void bottom_center_Click(object sender, EventArgs e)
         {
             gameController.Mark(1, 2);
+            gameController.AIChoose();
         }
 
         private void bottom_right_Click(object sender, EventArgs e)
         {
             gameController.Mark(2, 2);
+            gameController.AIChoose();
         }
     }
 
@@ -93,6 +102,8 @@ namespace TicTacToe_AI
 
         private Button[,] buttonGrid;
         private Label win_label;
+
+        private GridPosition recentGridPosition;
 
         public GameController(Button[,] buttons, Label winLabel)
         {
@@ -117,6 +128,8 @@ namespace TicTacToe_AI
                 {
                     grid[x, y] = currentMark;
                     buttonGrid[x, y].Text = currentMark;
+
+                    recentGridPosition = new GridPosition(x, y);
 
                     CheckForWin();
                     SwitchMark();
@@ -183,6 +196,91 @@ namespace TicTacToe_AI
         {
             win_label.Text = currentMark + " wins!";
             playing = false;
+        }
+
+        public void AIChoose()
+        {
+            Random random = new Random();
+
+            WinCombo topRow = new WinCombo();
+            topRow.gridPositions.Add(new GridPosition(0, 0));
+            topRow.gridPositions.Add(new GridPosition(1, 0));
+            topRow.gridPositions.Add(new GridPosition(2, 0));
+
+            WinCombo centerRow = new WinCombo();
+            centerRow.gridPositions.Add(new GridPosition(0, 1));
+            centerRow.gridPositions.Add(new GridPosition(1, 1));
+            centerRow.gridPositions.Add(new GridPosition(2, 1));
+
+            if (topRow.PositionInThisCombo(recentGridPosition))
+            {
+                GridPosition chosenPosition = new GridPosition();
+                chosenPosition = topRow.gridPositions[random.Next(0, topRow.gridPositions.Count)];
+
+                while (grid[chosenPosition.x, chosenPosition.y] != "")
+                {
+                    if (grid[chosenPosition.x, chosenPosition.y] != "")
+                    {
+                        topRow.gridPositions.Remove(chosenPosition);
+                    }
+
+                    chosenPosition = topRow.gridPositions[random.Next(0, topRow.gridPositions.Count)];
+                }
+
+                Mark(chosenPosition.x, chosenPosition.y);
+            }
+            else if (centerRow.PositionInThisCombo(recentGridPosition))
+            {
+                GridPosition chosenPosition = new GridPosition();
+                chosenPosition = centerRow.gridPositions[random.Next(0, centerRow.gridPositions.Count)];
+
+                while (grid[chosenPosition.x, chosenPosition.y] != "")
+                {
+                    if (grid[chosenPosition.x, chosenPosition.y] != "")
+                    {
+                        centerRow.gridPositions.Remove(chosenPosition);
+                    }
+
+                    chosenPosition = centerRow.gridPositions[random.Next(0, centerRow.gridPositions.Count)];
+                }
+
+                Mark(chosenPosition.x, chosenPosition.y);
+            }
+        }
+    }
+
+    public class GridPosition
+    {
+        public int x;
+        public int y;
+
+        public GridPosition()
+        {
+
+        }
+
+        public GridPosition(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    public class WinCombo
+    {
+        public List<GridPosition> gridPositions = new List<GridPosition>();
+
+        public bool PositionInThisCombo(GridPosition positionToCheck)
+        {
+            foreach (GridPosition currentPosition in gridPositions)
+            {
+                if (positionToCheck.x == currentPosition.x && positionToCheck.y == currentPosition.y)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }
