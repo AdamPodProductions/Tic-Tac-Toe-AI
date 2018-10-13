@@ -41,90 +41,117 @@
             // 
             // bottom_left
             // 
+            this.bottom_left.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bottom_left.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bottom_left.Location = new System.Drawing.Point(12, 673);
+            this.bottom_left.Location = new System.Drawing.Point(108, 723);
             this.bottom_left.Name = "bottom_left";
-            this.bottom_left.Size = new System.Drawing.Size(300, 300);
+            this.bottom_left.Size = new System.Drawing.Size(250, 250);
             this.bottom_left.TabIndex = 0;
             this.bottom_left.UseVisualStyleBackColor = true;
             this.bottom_left.Click += new System.EventHandler(this.bottom_left_Click);
             // 
             // bottom_right
             // 
+            this.bottom_right.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bottom_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bottom_right.Location = new System.Drawing.Point(696, 673);
+            this.bottom_right.Location = new System.Drawing.Point(620, 723);
             this.bottom_right.Name = "bottom_right";
-            this.bottom_right.Size = new System.Drawing.Size(300, 300);
+            this.bottom_right.Size = new System.Drawing.Size(250, 250);
             this.bottom_right.TabIndex = 1;
             this.bottom_right.UseVisualStyleBackColor = true;
             this.bottom_right.Click += new System.EventHandler(this.bottom_right_Click);
             // 
             // bottom_center
             // 
+            this.bottom_center.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bottom_center.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bottom_center.Location = new System.Drawing.Point(356, 673);
+            this.bottom_center.Location = new System.Drawing.Point(364, 723);
             this.bottom_center.Name = "bottom_center";
-            this.bottom_center.Size = new System.Drawing.Size(300, 300);
+            this.bottom_center.Size = new System.Drawing.Size(250, 250);
             this.bottom_center.TabIndex = 2;
             this.bottom_center.UseVisualStyleBackColor = true;
             this.bottom_center.Click += new System.EventHandler(this.bottom_center_Click);
             // 
             // center_center
             // 
+            this.center_center.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.center_center.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.center_center.Location = new System.Drawing.Point(356, 341);
+            this.center_center.Location = new System.Drawing.Point(364, 467);
             this.center_center.Name = "center_center";
-            this.center_center.Size = new System.Drawing.Size(300, 300);
+            this.center_center.Size = new System.Drawing.Size(250, 250);
             this.center_center.TabIndex = 5;
             this.center_center.UseVisualStyleBackColor = true;
             this.center_center.Click += new System.EventHandler(this.center_center_Click);
             // 
             // center_right
             // 
+            this.center_right.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.center_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.center_right.Location = new System.Drawing.Point(696, 341);
+            this.center_right.Location = new System.Drawing.Point(620, 467);
             this.center_right.Name = "center_right";
-            this.center_right.Size = new System.Drawing.Size(300, 300);
+            this.center_right.Size = new System.Drawing.Size(250, 250);
             this.center_right.TabIndex = 4;
             this.center_right.UseVisualStyleBackColor = true;
             this.center_right.Click += new System.EventHandler(this.center_right_Click);
             // 
             // center_left
             // 
+            this.center_left.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.center_left.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.center_left.Location = new System.Drawing.Point(12, 341);
+            this.center_left.Location = new System.Drawing.Point(108, 467);
             this.center_left.Name = "center_left";
-            this.center_left.Size = new System.Drawing.Size(300, 300);
+            this.center_left.Size = new System.Drawing.Size(250, 250);
             this.center_left.TabIndex = 3;
             this.center_left.UseVisualStyleBackColor = true;
             this.center_left.Click += new System.EventHandler(this.center_left_Click);
             // 
             // top_center
             // 
+            this.top_center.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.top_center.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.top_center.Location = new System.Drawing.Point(356, 12);
+            this.top_center.Location = new System.Drawing.Point(364, 211);
             this.top_center.Name = "top_center";
-            this.top_center.Size = new System.Drawing.Size(300, 300);
+            this.top_center.Size = new System.Drawing.Size(250, 250);
             this.top_center.TabIndex = 8;
             this.top_center.UseVisualStyleBackColor = true;
             this.top_center.Click += new System.EventHandler(this.top_center_Click);
             // 
             // top_right
             // 
+            this.top_right.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.top_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.top_right.Location = new System.Drawing.Point(696, 12);
+            this.top_right.Location = new System.Drawing.Point(620, 211);
             this.top_right.Name = "top_right";
-            this.top_right.Size = new System.Drawing.Size(300, 300);
+            this.top_right.Size = new System.Drawing.Size(250, 250);
             this.top_right.TabIndex = 7;
             this.top_right.UseVisualStyleBackColor = true;
             this.top_right.Click += new System.EventHandler(this.top_right_Click);
             // 
             // top_left
             // 
+            this.top_left.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.top_left.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.top_left.Location = new System.Drawing.Point(12, 12);
+            this.top_left.Location = new System.Drawing.Point(108, 211);
             this.top_left.Name = "top_left";
-            this.top_left.Size = new System.Drawing.Size(300, 300);
+            this.top_left.Size = new System.Drawing.Size(250, 250);
             this.top_left.TabIndex = 6;
             this.top_left.UseVisualStyleBackColor = true;
             this.top_left.Click += new System.EventHandler(this.top_left_Click);
