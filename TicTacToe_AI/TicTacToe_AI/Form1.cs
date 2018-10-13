@@ -16,7 +16,7 @@ namespace TicTacToe_AI
         private Button[,] buttonGrid;
         private string currentMark = "X";
 
-        private int turns = 0;
+        private int turns = 1;
         private bool playing = true;
 
         public Form1()
@@ -111,6 +111,12 @@ namespace TicTacToe_AI
             {
                 Win(currentMark);
                 return;
+            }
+
+            if (turns == 9)
+            {
+                win_label.Text = "Draw";
+                playing = false;
             }
         }
 
