@@ -52,13 +52,18 @@ namespace TicTacToe_AI
 
         public void Mark(int x, int y)
         {
-            if (grid[x, y].Equals(""))
+            if (playing)
             {
-                grid[x, y] = currentMark;
-                buttonGrid[x, y].Text = currentMark;
-                SwitchMark();
-                turns++;
-                CheckForWin();
+                if (grid[x, y].Equals(""))
+                {
+                    grid[x, y] = currentMark;
+                    buttonGrid[x, y].Text = currentMark;
+
+                    CheckForWin();
+                    SwitchMark();
+
+                    turns++;
+                }
             }
         }
 
@@ -112,6 +117,7 @@ namespace TicTacToe_AI
         public void Win(string mark)
         {
             win_label.Text = currentMark + " wins!";
+            playing = false;
         }
 
         private void top_left_Click(object sender, EventArgs e)
