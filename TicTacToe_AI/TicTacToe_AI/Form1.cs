@@ -179,7 +179,7 @@ namespace TicTacToe_AI
             }
         }
 
-        public void Win(string mark)
+        private void Win(string mark)
         {
             win_label.Text = currentMark + " wins!";
             playing = false;
